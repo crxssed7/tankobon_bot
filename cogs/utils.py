@@ -121,3 +121,14 @@ def get_manga_embed(manga, volumes):
         embeds.append(embed)
 
     return embeds
+
+def get_help_embed():
+    embed = Embed()
+    embed.color = 0x52b9b9
+    embed.title = 'Commands'
+    embed.description = f'The prefix for these commands are {config.COMMAND_PREFIX}'
+    embed.add_field(name='`search {query}`', value='Search for a manga. If only one result is returned, it will send the details for it.', inline=False)
+    embed.add_field(name='`manga {id}`', value='Gets the details of a specific manga using the ID.', inline=False)
+    embed.add_field(name='`recent`', value='Gets the 10 most recently updated manga.', inline=False)
+    embed.add_field(name='`help`', value='Displays this message.', inline=False)
+    return embed

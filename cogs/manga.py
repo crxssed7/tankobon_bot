@@ -67,5 +67,9 @@ class Manga(commands.Cog):
         else:
             await ctx.send(config.ERROR_MSG)
 
+    @commands.command()
+    async def help(self, ctx):
+        await ctx.send(embed=utils.get_help_embed())
+
 def setup(bot):
     bot.add_cog(Manga(bot))
