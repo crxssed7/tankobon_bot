@@ -15,4 +15,9 @@ if __name__ == "__main__":
 
     token = os.environ['BOT_TOKEN']
 
+    @bot.event
+    async def on_ready():
+        await bot.change_presence(activity=discord.Game(name="tankobon.fly.dev | $help"))
+        print("Bot is running.")
+
     bot.run(token)
