@@ -1,8 +1,0 @@
-# fly.toml file generated for tankobon-bot on 2022-09-01T11:18:29+01:00
-
-app = "tankobon-bot"
-kill_signal = "SIGINT"
-kill_timeout = 5
-processes = []
-
-[env]
